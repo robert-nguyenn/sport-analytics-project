@@ -1,0 +1,25 @@
+# Create or update .gitignore file
+echo "# Node.js
+node_modules/
+npm-debug.log
+*.log
+*.lock
+.cache/
+.env
+
+# Build files
+dist/
+build/
+coverage/
+*.bundle.js
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+" > .gitignore

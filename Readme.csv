@@ -1,0 +1,44 @@
+Project Title:
+  Analysis of Centre College vs. Emory University Soccer Match
+
+Overview:
+  This project entails the analysis of a soccer match between Centre College and Emory University. The analysis is conducted through Python programming language using various data manipulation and visualization libraries such as Pandas, NumPy, Matplotlib, BeautifulSoup, and Seaborn. The aim is to derive insights into the match statistics including goals, substitutions, shots, fouls, cards, and offsides for both teams.
+
+File Structure:
+  1. Centre_v_Emory.csv: CSV file containing the raw data of the match.
+  2. Modified_Centre_v_Emory.csv: CSV file containing the modified data after data cleaning and manipulation.
+  3. soccer_analysis.py: Python script containing the code for data analysis, visualization, and lineup handling.
+
+Dependencies:
+  Python 3.x
+  Pandas
+  NumPy
+  Matplotlib
+  Requests
+  BeautifulSoup
+  Seaborn
+
+Detailed Steps:
+  1. Data Preprocessing:
+    Reading the raw data from Centre_v_Emory.csv.
+    Renaming columns and dropping unnecessary columns.
+    Saving the modified DataFrame to Modified_Centre_v_Emory.csv.
+  2. Exploratory Data Analysis:
+    Analyzing statistics such as goals, substitutions, shots, fouls, cards, and offsides for both teams.
+    Determining match events including the first goal scorer, corner kicks, substitutions, shots, fouls, cards, and offsides.
+  3. Lineup Handling:
+    Initializing initial lineups for both teams.
+    Parsing play descriptions to handle substitutions and update lineups accordingly.
+  4. Visualization:
+    Visualizing various match statistics using Seaborn barplots.
+Notes:
+    Ensure all dependencies are installed before running the script.
+    The script provides detailed insights into the match statistics and lineup changes throughout the game.
+    Modify the file paths if the CSV files are stored in different directories.
+
+Author:
+  Nguyen Hung Anh (Robert Nguyen)
+Contact:
+  anhhung.nguyen@centre.edu
+License:
+This project is licensed under the Centre College License.

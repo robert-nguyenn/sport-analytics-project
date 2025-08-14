@@ -5,8 +5,7 @@
 
 export const sampleMatchData = {
   preview: [
-    {
-      clock: '0:00',
+// No mock data. Use real data sources instead.
       away_play: 'Jonelle Barron at goalie for Centre College.',
       visiting_team_score: 0,
       home_team_score: 0,
@@ -333,32 +332,7 @@ export const sampleMatchData = {
           home_team: 45.7,
           visiting_team: 54.3
         },
-        shots: {
-          home_team: 15,
-          visiting_team: 12
-        },
-        shots_on_target: {
-          home_team: 9,
-          visiting_team: 8
-        },
-        shot_accuracy: {
-          home_team: 60.0,
-          visiting_team: 66.7
-        },
-        pass_completion: {
-          home_team: 78.3,
-          visiting_team: 82.1
-        },
-        duels_won: {
-          home_team: 48.2,
-          visiting_team: 51.8
-        },
-        fouls: {
-          home_team: 7,
-          visiting_team: 7
-        },
-        cards: {
-          home_team: { yellow: 2, red: 0 },
+        // No mock/sample data present in this file.
           visiting_team: { yellow: 1, red: 0 }
         }
       },

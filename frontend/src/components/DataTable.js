@@ -7,7 +7,7 @@ import {
 import SearchIcon from '@mui/icons-material/Search';
 import ClearIcon from '@mui/icons-material/Clear';
 import TableViewIcon from '@mui/icons-material/TableView';
-import { sampleMatchData } from '../utils/sampleData'; // Import the sample data
+// import removed: use dynamic data from props or API
 
 const DataTable = ({ rows, columns }) => {
   const [page, setPage] = React.useState(0);

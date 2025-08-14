@@ -16,7 +16,7 @@ import PieChartIcon from '@mui/icons-material/PieChart';
 import DonutLargeIcon from '@mui/icons-material/DonutLarge';
 import TableChartIcon from '@mui/icons-material/TableChart';
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
-import { sampleMatchData } from '../utils/sampleData'; // Import sample data
+// import removed: use dynamic data from props or API
 
 const getChartTypeIcon = (chartData) => {
   if (!chartData?.data || !chartData.data[0]) return <BarChartIcon />;
@@ -257,11 +257,12 @@ const ChartsGrid = ({ visualizations, onExportChart }) => {
   }
 
   // Show sample data notice if using fallback data
-  const isSampleData = !visualizations || Object.keys(visualizations).length === 0;
+  // Use dynamic data: visualizations should be provided by props or fetched from API
+  const isDataAvailable = visualizations && Object.keys(visualizations).length > 0;
 
   return (
     <>
-      {isSampleData && (
+  {!isDataAvailable && (
         <Paper sx={{ 
           backgroundColor: 'info.light', 
           color: 'info.contrastText',

@@ -9,7 +9,7 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import BuildIcon from '@mui/icons-material/Build';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-import { sampleMatchData } from '../utils/sampleData'; // Import sample data
+// import removed: use dynamic data from props or API
 
 const CleaningLog = ({ log }) => {
   const [expanded, setExpanded] = React.useState(true);
@@ -30,7 +30,8 @@ const CleaningLog = ({ log }) => {
   const totalSteps = effectiveLog.length;
   const completedSteps = effectiveLog.length - 1; // Excluding initial
   
-  const usingSampleData = log && log.length === 0;
+  // Use dynamic data: log should be provided by props or fetched from API
+  const isDataAvailable = log && log.length > 0;
   
   return (
     <Paper 
@@ -65,7 +66,7 @@ const CleaningLog = ({ log }) => {
             sx={{ ml: 2 }}
           />
           
-          {usingSampleData && (
+          {!isDataAvailable && (
             <Chip 
               label="Sample Data" 
               size="small" 

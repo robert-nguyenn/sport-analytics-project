@@ -8,7 +8,7 @@ import NumbersIcon from '@mui/icons-material/Numbers';
 import CategoryIcon from '@mui/icons-material/Category';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 import { alpha } from '@mui/material/styles';
-import { sampleMatchData } from '../utils/sampleData';
+// import removed: use dynamic data from props or API
 
 const SummaryCards = ({ summary, onDownload, onExportChart }) => {
   // If no summary provided, use sample data summary
@@ -335,14 +335,15 @@ const SummaryCards = ({ summary, onDownload, onExportChart }) => {
   };
 
   // Check if we're using sample data
-  const usingSampleData = summary && Object.keys(summary).length === 0;
+  // Use dynamic data: summary should be provided by props or fetched from API
+  const isDataAvailable = summary && Object.keys(summary).length > 0;
 
   return (
     <Box sx={{ mb: 4 }}>
       <Typography variant="h5" gutterBottom sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
         <AnalyticsIcon sx={{ mr: 1, verticalAlign: 'middle' }} />
         Data Summary
-        {usingSampleData && (
+  {!isDataAvailable && (
           <Chip 
             label="Sample Data" 
             size="small" 
